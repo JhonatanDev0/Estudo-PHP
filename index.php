@@ -66,9 +66,33 @@ if(mysqli_query($conexao, 'DELETE FROM ALUNOS WHERE ID_ALUNO = 6')){
     echo 'Falha ao apagar dados';
 }
 
-*/
 if(mysqli_query($conexao,'UPDATE ALUNOS SET NOME_ALUNO = "Maria Eduarda" WHERE ID_ALUNO = 4')){
     echo 'Atualizado com sucesso';
 }else{
     echo 'Falha ao atualizar dados';
 }
+
+*/
+echo '<table border=1>
+        <tr>
+            <th>id</th>
+            <th>Nome</th>
+            <th>Data de nascimento</th>
+        </tr>';
+$consulta = mysqli_query($conexao, 'SELECT * FROM ALUNOS');
+
+while($linha = mysqli_fetch_array($consulta)){
+    echo '<tr>';
+    echo '<td>';
+    echo $linha['id_aluno'];
+    echo '</td>';
+    echo '<td>';
+    echo $linha['nome_aluno'];
+    echo '</td>';
+    echo '<td>';
+    echo $linha['data_nascimento'];
+    echo '</td>';
+    echo '</tr>';
+}
+
+echo '</table>';
