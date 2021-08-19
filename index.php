@@ -59,10 +59,16 @@ $executar = mysqli_query($conexao,$query);
 $query = 'INSERT INTO ALUNOS_CURSOS(id_aluno, id_curso) VALUES(1,1)';
 
 $executar = mysqli_query($conexao,$query);
-*/
 
 if(mysqli_query($conexao, 'DELETE FROM ALUNOS WHERE ID_ALUNO = 6')){
     echo 'Apagado com sucesso';
 }else{
     echo 'Falha ao apagar dados';
+}
+
+*/
+if(mysqli_query($conexao,'UPDATE ALUNOS SET NOME_ALUNO = "Maria Eduarda" WHERE ID_ALUNO = 4')){
+    echo 'Atualizado com sucesso';
+}else{
+    echo 'Falha ao atualizar dados';
 }
