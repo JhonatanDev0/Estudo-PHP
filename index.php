@@ -18,11 +18,6 @@ $query = 'CREATE TABLE CURSOS (
 )';
 
 $executar = mysqli_query($conexao,$query);
-if($executar){
-    echo 'Executado com sucesso(cursos)';
-}else{
-    echo 'Falha ao executar(cursos)';
-}
 
 # Tabela alunos (nome do aluno, data_nascimento)
 $query = 'CREATE TABLE ALUNOS(
@@ -33,11 +28,6 @@ $query = 'CREATE TABLE ALUNOS(
 )';
 
 $executar = mysqli_query($conexao,$query);
-if($executar){
-    echo 'Executado com sucesso(alunos)';
-}else{
-    echo 'Falha ao executar(alunos)';
-}
 
 # Tabela alunos_cursos (aluno, curso)
 
@@ -50,8 +40,22 @@ $query = 'CREATE TABLE ALUNOS_CURSOS(
 )';
 
 $executar = mysqli_query($conexao,$query);
-if($executar){
-    echo 'Executado com sucesso(alunos_cursos)';
-}else{
-    echo 'Falha ao executar(alunos_cursos)';
-}
+
+# Inserindo dados na tabela Alunos
+$query = 'INSERT INTO ALUNOS(nome_aluno, data_nascimento) VALUES("Jhonatan","24-04-2000")';
+
+$executar = mysqli_query($conexao,$query);
+
+$query = 'INSERT INTO ALUNOS(nome_aluno, data_nascimento) VALUES("Maria","19-06-2000")';
+
+$executar = mysqli_query($conexao,$query);
+
+# Inserindo dados na tabela Cursos
+$query = 'INSERT INTO CURSOS(nome_curso, carga_horaria) VALUES("PHP E MYSQL",10)';
+
+$executar = mysqli_query($conexao,$query);
+
+# Inserindo dados na tabela Alunos_Cursos
+$query = 'INSERT INTO ALUNOS_CURSOS(id_aluno, id_curso) VALUES(1,1)';
+
+$executar = mysqli_query($conexao,$query);
