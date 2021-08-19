@@ -7,7 +7,7 @@ $senha = '';
 $database = 'jhonatan';
 
 $conexao = mysqli_connect($servidor,$usuario,$senha,$database);
-
+/*
 # Criando tabelas usando PHP
 # Tabela cursos (nome do curso, carga horaria)
 $query = 'CREATE TABLE CURSOS (
@@ -59,3 +59,10 @@ $executar = mysqli_query($conexao,$query);
 $query = 'INSERT INTO ALUNOS_CURSOS(id_aluno, id_curso) VALUES(1,1)';
 
 $executar = mysqli_query($conexao,$query);
+*/
+
+if(mysqli_query($conexao, 'DELETE FROM ALUNOS WHERE ID_ALUNO = 6')){
+    echo 'Apagado com sucesso';
+}else{
+    echo 'Falha ao apagar dados';
+}
