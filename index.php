@@ -72,7 +72,6 @@ if(mysqli_query($conexao,'UPDATE ALUNOS SET NOME_ALUNO = "Maria Eduarda" WHERE I
     echo 'Falha ao atualizar dados';
 }
 
-*/
 echo '<table border=1>
         <tr>
             <th>id</th>
@@ -93,6 +92,29 @@ while($linha = mysqli_fetch_array($consulta)){
     echo $linha['data_nascimento'];
     echo '</td>';
     echo '</tr>';
+}
+
+echo '</table>';
+
+mysqli_query($conexao, "ALTER TABLE CURSOS CHANGE id id_curso INT NOT NULL AUTO_INCREMENT");
+*/
+
+$consulta = mysqli_query($conexao, 'SELECT ALUNOS.nome_aluno, CURSOS.nome_curso FROM ALUNOS, CURSOS, ALUNOS_CURSOS WHERE ALUNOS_CURSOS.id_aluno = ALUNOS.id_aluno AND ALUNOS_CURSOS.id_curso = CURSOS.id_curso');
+
+echo '<table border=1>
+        <tr>
+            <th>Nome do ALuno</th>
+            <th>Nome do Curso</th>
+        </tr>';
+
+while($linha = mysqli_fetch_array($consulta)){
+    echo '<tr>';
+    echo '<td>';
+    echo $linha['nome_aluno'];
+    echo '</td>';
+    echo '<td>';
+    echo $linha['nome_curso'];
+    echo '</td>';
 }
 
 echo '</table>';
