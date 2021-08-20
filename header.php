@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cursos PHP&MYSQL</title>
+        <title>OS GEO</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -11,7 +11,9 @@
             <div class="container">
                 <img src="img/logo.png" title="logo" alt="Logo">
                     <div id="menu">
-
+                        <a href=#>Cursos</a>
+                        <a href=#>Alunos</a>
+                        <a href=#>Matrículas</a>
                     </div>
             </div>
         </header>
