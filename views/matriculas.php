@@ -3,6 +3,8 @@
     <tr>
         <th>Nome aluno</th>
         <th>Nome curso</th>
+        <th>Editar</th>
+        <th>Deletar</th>
     </tr>
 
     <?php
