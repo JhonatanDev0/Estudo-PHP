@@ -1,3 +1,4 @@
+<a href="?pagina=inserir_matricula">Inserir matricula </a>
 <table style="border:1px solid #ccc; width: 100%">
     <tr>
         <th>Nome aluno</th>
