@@ -4,6 +4,7 @@
         <title>OS GEO</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdn.datatables.net/1.11.0/css/jquery.dataTables.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
 
