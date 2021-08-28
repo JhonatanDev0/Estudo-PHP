@@ -24,10 +24,10 @@ footer{
 }
 
 /* Class */
-.container{
+/*.container{
     margin: 0 auto; 
     width: 960px;
-}
+}*/
 
 /* id */
 #conteudo{
@@ -36,12 +36,12 @@ footer{
 
 #menu{
     float: right;
-    padding: 35px 0;
+    padding: 30px 0;
 }
 
 #menu a{
     text-decoration: none;
-    padding: 50px 50px;
+    padding: 10px 30px;
     color: #e3e3e3;
     text-shadow: 1px 1px #111;
 }
