@@ -2,8 +2,8 @@
 
 <form method="post" action="processa_matricula.php">
         <br>
-        <p>Selecione o aluno</p>
-        <select name="escolha_aluno">
+        <p>Selecione o aluno:</p>
+        <select class="form-control" name="escolha_aluno">
                 <option>Selecione um aluno</option>
                 <?php
                 while ($linha = mysqli_fetch_array($consulta_alunos)) {
@@ -13,8 +13,8 @@
         </select>
         <br><br>
 
-        <p>Selecione o curso</p>
-        <select name="escolha_curso">
+        <p>Selecione o curso:</p>
+        <select class="form-control" name="escolha_curso">
                 <option>Selecione um curso</option>
                 <?php
                 while ($linha = mysqli_fetch_array($consulta_cursos)) {
@@ -23,6 +23,6 @@
                 ?>
         </select>
         <br><br>
-        <input type="submit" value="Matricular aluno no curso">
+        <input class="btn btn-success" type="submit" value="Matricular aluno no curso">
 
 </form>
