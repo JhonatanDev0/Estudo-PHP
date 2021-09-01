@@ -1,10 +1,10 @@
-<?php
+<?php 
 
 include 'db.php';
 
 $id_aluno = $_GET['id_aluno'];
 
-$query = "DELETE FROM ALUNOS WHERE id_aluno = $id_aluno";
+$query = "DELETE FROM ALUNOS WHERE ID_ALUNO = $id_aluno";
 
 mysqli_query($conexao, $query);
 
